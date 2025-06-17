@@ -189,6 +189,9 @@ span.styles_arrow__nhjkx.undefined.styles_kind_default__gbx2m {
   line-height: 1em;
   white-space: nowrap;
 }
+.hero .row-3{
+  overflow: hidden;
+}
 .hero .row-3 .text{
   display: flex;
 }
