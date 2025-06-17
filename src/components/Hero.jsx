@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
       </div>
       <div className='row-2'>
-        <img src='/public/photo-1749838432456-4cf0774dc92e.avif'></img>
+        <img src='/photo-1749838432456-4cf0774dc92e.avif'></img>
       </div>
     </div>
   );
