@@ -17,6 +17,11 @@ const Hero = () => {
       <div className='row-2'>
         <img src='/photo-1749838432456-4cf0774dc92e.avif'></img>
       </div>
+      <div className='row-3 container'>
+        <div marque _1><div className='text'><h2>lorem ipsum dolor</h2><h2 className='fill'>lorem ipsum dolor</h2></div></div>
+        <div marque _2><div className='text'><h2>lorem ipsum dolor</h2><h2 className='fill'>lorem ipsum dolor</h2></div></div>
+        <div marque _3><div className='text'><h2>lorem ipsum dolor</h2><h2 className='fill'>lorem ipsum dolor</h2></div></div>
+      </div>
     </div>
   );
 };
