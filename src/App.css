@@ -8,13 +8,13 @@
 body, html {
   height: 100%;
   font-family: 'Arial', sans-serif;
-  background-color:#000;
+  background-color:beige;
   color: #ffff;
   line-height: 1.4em;
 }
 .container{
   max-width: 1400px;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px 20px;
 }
 /* HEADER CSS START */
@@ -54,8 +54,8 @@ body, html {
 /* HOME CSS START */
 /* HERO CSS START */
 .hero{
-  /* height: 300vh; */
   position: relative;
+  background-color: #000;
 }
 .hero h1{
   font-size:150px;
@@ -231,7 +231,7 @@ span.styles_arrow__nhjkx.undefined.styles_kind_default__gbx2m {
 .hero .row-3 h2.fill {
   color: transparent; 
   -webkit-text-stroke: 2px darksalmon; 
-  text-stroke: 2px darksalmon; 
+  text-stroke: 2px #e9967a; 
 }
 .hero .row-3 .wrapper{
   
@@ -266,21 +266,22 @@ transform: rotate(-5deg);
 
 /* HERO CSS END */
 .features{
-  height: 100vh;
+  height: 150vh;
   background-color: beige;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
 }
 .features img{
 width: 600px;
-height: 600px;
+height: 700px;
 }
 .features .wrapper{
   position: relative;
 }
 .gif-wrapper img{
-    border-radius: calc((1400px) / 2) calc((1400px) / 2) 0 0;
+    border-radius: calc((37.5rem) / 2) calc((37.5rem) / 2) 0 0;
     overflow: hidden;
 }
 .curved-text-wrapper svg {
@@ -290,5 +291,53 @@ height: 600px;
 }
 .curved-text-wrapper .text{
   font-size: 56px !important;
+}
+.curved-text-wrapper textPath{
+font-family: cursive;
+font-weight: 700;
+}
+.partnership {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+    padding-bottom: 50px;
+    background-image: url(/slava-jamm-t082k5uCLP4-unsplash.jpg);
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px 50px 0px 0;
+    overflow: hidden;
+    /* background-attachment: fixed; */
+}
+
+.partnership::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+    background: rgba(0, 0, 0, 0.5); /* black overlay with 50% opacity */
+    border-radius: 50px 50px 0px 0;
+    z-index: 1;
+}
+
+.partnership > * {
+    position: relative;
+    z-index: 2; /* bring actual content above the overlay */
+}
+
+.partnership{
+  .row-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .row-1 h3{
+    font-size: 100px;
+    text-transform: capitalize;
+    line-height: 1em;
+  }
+  .row-1 .col-2{
+    display: flex;
+    align-items: end;
+  }
 }
 /* HOME CSS END */

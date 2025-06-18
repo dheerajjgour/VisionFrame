@@ -1,12 +1,15 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import Feactures from '../components/Feactures';
+import Hero from '../components/HomeComponents/Hero';
+import Features from '../components/HomeComponents/Features';
+import Model from '../components/HomeComponents/Model';
+import Partnership from '../components/HomeComponents/Partnership';
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <Feactures/>
+      <Features/>
+      <Partnership/>
     </>
   );
 };

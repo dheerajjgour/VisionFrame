@@ -3,10 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SmoothScroll from './components/SmoothScroll'; 
 import './App.css';
+
 function App() {
   return (
-    <>
+    <SmoothScroll>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,7 +17,7 @@ function App() {
         <Route path="/contact" element={<Contact />} /> */}
       </Routes>
       <Footer />
-    </>
+    </SmoothScroll>
   );
 }
 
