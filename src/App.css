@@ -12,6 +12,11 @@ body, html {
   color: #ffff;
   line-height: 1.4em;
 }
+ h3{
+    font-size: 90px;
+    text-transform: capitalize;
+    line-height: 1em;
+  }
 .container{
   max-width: 1400px;
   margin: 0 auto;
@@ -339,5 +344,22 @@ font-weight: 700;
     display: flex;
     align-items: end;
   }
+}
+.modelviewer{
+  background-color: #000;
+}
+.modelviewer .row-1{
+  position:sticky;
+  top: 70px;
+}
+.modelviewer .col-1{
+  max-width: 420px;
+  height: 100vh;
+}
+.modelviewer .row-2{
+  margin-top: -45%;
+}
+.modelviewer .row-3 .col-1{
+  margin-left: auto;
 }
 /* HOME CSS END */
