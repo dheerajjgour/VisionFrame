@@ -1,7 +1,6 @@
-// ModelViewer.jsx
 import React, { Suspense, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { useGLTF } from '@react-three/drei';
+import { OrbitControls, useGLTF } from '@react-three/drei';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -14,14 +13,13 @@ function Model() {
   useEffect(() => {
     if (!modelRef.current) return;
 
-    // Animate rotation on scroll
     gsap.to(modelRef.current.rotation, {
-      y: Math.PI * 4, // full 360° rotation
+      y: Math.PI * 2,
       scrollTrigger: {
         trigger: '.modelviewer',
         start: 'top center',
         end: 'bottom center',
-        scrub: 2,
+        scrub: true,
       },
       ease: 'none',
     });
@@ -33,7 +31,7 @@ function Model() {
       object={gltf.scene}
       scale={1.5}
       position={[0, -1, 0]}
-      rotation={[0, Math.PI, 0]} // starting rotation
+      rotation={[0, Math.PI, 0]}
     />
   );
 }
@@ -46,6 +44,12 @@ function ModelViewer() {
       <Suspense fallback={null}>
         <Model />
       </Suspense>
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        minPolarAngle={Math.PI / 2}
+        maxPolarAngle={Math.PI / 2}
+      />
     </Canvas>
   );
 }

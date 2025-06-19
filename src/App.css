@@ -17,6 +17,13 @@ body, html {
     text-transform: capitalize;
     line-height: 1em;
   }
+ h4 {
+    font-size: 45px;
+    text-transform: capitalize;
+    line-height: 1em;
+    letter-spacing: -2px;
+    font-family: cursive;
+}
 .container{
   max-width: 1400px;
   margin: 0 auto;
@@ -347,6 +354,10 @@ font-weight: 700;
 }
 .modelviewer{
   background-color: #000;
+  border-radius: 0 0 100px 100px;
+      margin-bottom: -130px;
+    z-index: 9999;
+    position: relative;
 }
 .modelviewer .row-1{
   position:sticky;
@@ -362,4 +373,20 @@ font-weight: 700;
 .modelviewer .row-3 .col-1{
   margin-left: auto;
 }
+footer {
+    background-color: darksalmon;
+    height: 100vh;
+    padding-top: 150px;
+}
+footer .row-1 h4{
+  text-align: center;
+}
+footer input{
+  background: transparent;
+  border: unset;
+  border-bottom: 2px solid #fff !important;
+  outline: unset !important;
+  color:#fff;
+}
+
 /* HOME CSS END */
