@@ -192,7 +192,6 @@ span.styles_arrow__nhjkx.undefined.styles_kind_default__gbx2m {
 .hero .row-1{
   z-index: 10;
   position: relative;
-  padding: 0;
   margin-top: -45%;
 }
 .hero .row-1 .wrapper{
@@ -390,3 +389,29 @@ footer input{
 }
 
 /* HOME CSS END */
+@media(max-width:768px){
+  h3{
+    font-size: 35px !important;
+  }
+  h4 {
+    font-size: 30px !important;
+}
+    .hero h1 {
+    font-size: 40px;
+
+}
+    .features img {
+    width: 300px;
+    height: 400px;
+}
+   .address-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+}
+    .hero .row-1 .wrapper {
+    display: block;
+}
+.partnership .row-1 {
+    display: block;
+}
+}
