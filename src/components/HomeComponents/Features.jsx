@@ -32,7 +32,7 @@ useEffect(() => {
 " fill="none" />
 
 
-                <text font-size="90px" fill="#e9967a">
+                <text font-size="90px" fill="#fff">
                   <textPath id="animated-textpath" href="#curve" startOffset="60%" text-anchor="middle">
                    LOREM ISPSUM LOREM 
                   </textPath>
