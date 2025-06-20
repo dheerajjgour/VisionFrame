@@ -62,6 +62,70 @@ body, html {
   text-decoration: none;
   list-style: none;
 }
+.m-menu-bar {
+  position: relative;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  display: block;
+  z-index: 10;
+}
+
+.m-menu-bar::before,
+.m-menu-bar::after,
+.m-menu-bar div {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.m-menu-bar::before {
+  top: 0;
+}
+
+.m-menu-bar div {
+  top: 8px;
+}
+
+.m-menu-bar::after {
+  top: 16px;
+}
+ul.m-menu-wrapper {
+    position: absolute;
+    left: 0;
+    top:0px;
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+    background: #000;
+    align-items: start;
+    justify-content: center;
+    padding: 50px 20px;
+}
+ul.m-menu-wrapper{
+  flex-direction:column;
+}
+ul.m-menu-wrapper li{
+  font-size: 20px;
+}
+.m-menu-wrapper {
+  transform-origin: top center;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.2s ease 0.1s;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.m-menu-wrapper.open {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
 /* HEADER CSS END */
 /* HOME CSS START */
 /* HERO CSS START */
@@ -355,7 +419,7 @@ font-weight: 700;
   background-color: #000;
   border-radius: 0 0 100px 100px;
       margin-bottom: -130px;
-    z-index: 9999;
+    z-index: 99;
     position: relative;
 }
 .modelviewer .row-1{
@@ -389,7 +453,7 @@ footer input{
 }
 
 /* HOME CSS END */
-@media(max-width:768px){
+@media(max-width:767px){
   h3{
     font-size: 35px !important;
   }
@@ -398,7 +462,20 @@ footer input{
 }
     .hero h1 {
     font-size: 40px;
+    margin-bottom:15px;
 
+}
+.spinner svg.styles_circles___YFtV {
+    width: 100px !important;
+    height: 100px;
+}
+.header .container{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-wrapper{
+  display: none !important;
 }
     .features img {
     width: 300px;
@@ -408,10 +485,26 @@ footer input{
     grid-template-columns: 1fr !important;
     gap: 20px !important;
 }
+.hero .row-1 {
+    margin-top: -150%;
+}
+.hero-text {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
     .hero .row-1 .wrapper {
     display: block;
 }
 .partnership .row-1 {
     display: block;
+}
+.features {
+    height: 100vh;
+    padding-top: 20px;
+}
+}
+@media(min-width:768px){
+.mobile-menu{
+  display: none;
 }
 }

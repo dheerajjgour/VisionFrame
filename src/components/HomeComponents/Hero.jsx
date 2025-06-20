@@ -8,26 +8,40 @@ const Hero = () => {
   const heroRef = useRef(null);
   const imgRef = useRef(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        imgRef.current,
-        { scale: 3 }, // Initial width
-        {
-          scale: 1,
-          y: 50,
-          scrollTrigger: {
-            trigger: heroRef.current,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1,
-          },
-          ease: "power2.out",
-        }
-      );
-    }, heroRef); // Scope the GSAP context to .hero for cleanup
+useEffect(() => {
+    const mm = gsap.matchMedia();
 
-    return () => ctx.revert(); // Remove animations when component unmounts
+    mm.add(
+      {
+        isDesktop: '(min-width: 769px)',
+        isMobile: '(max-width: 768px)',
+      },
+      (context) => {
+        const { isDesktop, isMobile } = context.conditions;
+
+        const ctx = gsap.context(() => {
+          gsap.fromTo(
+            imgRef.current,
+            { scale: isDesktop ? 3 : 1.2 },
+            {
+              scale: isDesktop ? 1 : 0.6,
+              y: isDesktop ? 50 : 50,
+              scrollTrigger: {
+                trigger: heroRef.current,
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 1,
+              },
+              ease: 'power2.out',
+            }
+          );
+        }, heroRef);
+
+        return () => ctx.revert(); // Cleanup
+      }
+    );
+
+    return () => mm.revert(); // Remove matchMedia listeners on unmount
   }, []);
 
   return (
