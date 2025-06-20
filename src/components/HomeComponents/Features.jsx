@@ -12,7 +12,7 @@ useEffect(() => {
       trigger: ".features",
       start: "top 55%",    
       end: "bottom bottom",      
-      scrub: 1,            
+      scrub: 2,            
     },
   });
 }, []);
@@ -32,9 +32,9 @@ useEffect(() => {
 " fill="none" />
 
 
-                <text font-size="90px" fill="#fff">
+                <text font-size="70px" fill="#fff">
                   <textPath id="animated-textpath" href="#curve" startOffset="60%" text-anchor="middle">
-                   LOREM ISPSUM LOREM 
+                   CUSTOMER TESTIMORNIAL
                   </textPath>
                 </text>
               </svg>

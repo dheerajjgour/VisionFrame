@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Model() {
   const modelRef = useRef();
-  const gltf = useGLTF('/model/source/model.gltf');
+  const gltf = useGLTF('/public/model/source/model.gltf');
 
   useEffect(() => {
     if (!modelRef.current) return;

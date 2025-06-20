@@ -50,13 +50,13 @@ useEffect(() => {
         <div className="row-2">
           <img
             ref={imgRef}
-            src="/photo-1748795303121-02b90e036dec.avif"
+            src="/sky.png"
             style={{ transformOrigin: "center center" }}
           ></img>
         </div>
         <div className="container row-1">
           <div className="wrapper">
-            <h1 className="hero-title">lorem ipsum dolor</h1>
+            <h1 className="hero-title">ASHWIN SHARMA</h1>
             <div className="wrapper-2">
               <p className="hero-text">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -76,28 +76,28 @@ useEffect(() => {
           <div className="wrapper">
             <div className="marquee _1">
               <div className="text">
-                <h2>lorem ipsum dolor</h2>
-                <h2 className="fill">lorem ipsum dolor</h2>
-                <h2>lorem ipsum dolor</h2>
-                <h2 className="fill">lorem ipsum dolor</h2>
+                <h2>Ashwin Sharma</h2>
+                <h2 className="fill">Ashwin Sharma</h2>
+                <h2>Ashwin Sharma</h2>
+                <h2 className="fill">Ashwin Sharma</h2>
               </div>
             </div>
 
             <div className="marquee _2">
               <div className="text">
-                <h2>lorem ipsum dolor</h2>
-                <h2 className="fill">lorem ipsum dolor</h2>
-                <h2>lorem ipsum dolor</h2>
-                <h2 className="fill">lorem ipsum dolor</h2>
+                <h2>Ashwin Sharma</h2>
+                <h2 className="fill">FullStack Developer</h2>
+                <h2>FullStack Developer</h2>
+                <h2 className="fill">FullStack Developer</h2>
               </div>
             </div>
 
             <div className="marquee _3">
               <div className="text">
-                <h2>lorem ipsum dolor</h2>
-                <h2 className="fill">lorem ipsum dolor</h2>
-                <h2>lorem ipsum dolor</h2>
-                <h2 className="fill">lorem ipsum dolor</h2>
+                <h2>Ashwin Sharma</h2>
+                <h2 className="fill">Ashwin Sharma</h2>
+                <h2>Ashwin Sharma</h2>
+                <h2 className="fill">Ashwin Sharma</h2>
               </div>
             </div>
           </div>

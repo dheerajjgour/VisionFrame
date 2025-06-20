@@ -12,7 +12,7 @@ function Header() {
       <div className='container'>
         <div className='wrapper'>
           <div className="logo">
-            <img src="/20250617_1104_Vision%20Frame%20Logo_simple_compose_01jxy61tznf1mssmg4c0bxckma.png" alt="Logo" />
+            <img src="/LOGO-1.png" alt="Logo" />
           </div>
 
           <ul className='menu-wrapper'>
