@@ -38,7 +38,7 @@ function Features() {
                 fill="none"
               />
 
-              <text font-size="70px" fill="#fff">
+              <text font-size="90px" fill="#fff">
                 <textPath
                   id="animated-textpath"
                   href="#curve"

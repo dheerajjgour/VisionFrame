@@ -6,6 +6,7 @@ function Model() {
     <>
       <section className="modelviewer">
         <div className="container">
+          <h3 style={{textAlign:"center"}}>Services</h3>
           <div className="row-1">
             <ModelViewer />
           </div>
