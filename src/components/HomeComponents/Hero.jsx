@@ -8,13 +8,13 @@ const Hero = () => {
   const heroRef = useRef(null);
   const imgRef = useRef(null);
 
-useEffect(() => {
+  useEffect(() => {
     const mm = gsap.matchMedia();
 
     mm.add(
       {
-        isDesktop: '(min-width: 769px)',
-        isMobile: '(max-width: 768px)',
+        isDesktop: "(min-width: 769px)",
+        isMobile: "(max-width: 768px)",
       },
       (context) => {
         const { isDesktop, isMobile } = context.conditions;
@@ -28,11 +28,11 @@ useEffect(() => {
               y: isDesktop ? 50 : 50,
               scrollTrigger: {
                 trigger: heroRef.current,
-                start: 'top top',
-                end: 'bottom bottom',
+                start: "top top",
+                end: "bottom bottom",
                 scrub: 1,
               },
-              ease: 'power2.out',
+              ease: "power2.out",
             }
           );
         }, heroRef);
@@ -59,15 +59,16 @@ useEffect(() => {
             <h1 className="hero-title">ASHWIN SHARMA</h1>
             <div className="wrapper-2">
               <p className="hero-text">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Choose me for my extensive expertise and innovative approach,
+                delivering personalized solutions that align with your unique
+                needs. I am customer-focused, ensuring open communication and
+                reliable timelines throughout the project. With meticulous
+                attention to detail, I consistently deliver high-quality results
+                on time and within your budget. My proven track record of
+                successful projects and satisfied clients showcases my
+                commitment to excellence.
               </p>
-              <Spinner text="Lorem"/>
+              <Spinner text="Lorem" />
             </div>
           </div>
         </div>
@@ -94,10 +95,10 @@ useEffect(() => {
 
             <div className="marquee _3">
               <div className="text">
-                <h2>Ashwin Sharma</h2>
-                <h2 className="fill">Ashwin Sharma</h2>
-                <h2>Ashwin Sharma</h2>
-                <h2 className="fill">Ashwin Sharma</h2>
+                <h2>JMBLISS IT SOLUTIONS</h2>
+                <h2 className="fill">CEO</h2>
+                <h2>JMBLISS IT SOLUTIONS</h2>
+                <h2 className="fill">CEO</h2>
               </div>
             </div>
           </div>

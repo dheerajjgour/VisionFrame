@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Model() {
   const modelRef = useRef();
-  const gltf = useGLTF('/public/model/source/model.gltf');
+  const gltf = useGLTF('/model/source/model.gltf');
 
   useEffect(() => {
     if (!modelRef.current) return;
@@ -40,7 +40,7 @@ function ModelViewer() {
   return (
     <Canvas style={{ height: '100vh' }} camera={{ position: [0, 0, 25], fov: 45 }}>
       <ambientLight intensity={0.5} />
-      <directionalLight position={[0, 2, 5]} />
+      <directionalLight position={[2, 2, 2]} />
       <Suspense fallback={null}>
         <Model />
       </Suspense>

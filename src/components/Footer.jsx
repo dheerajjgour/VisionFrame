@@ -24,7 +24,7 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div className="row-1" style={{ textAlign: 'center' }}>
-          <h4 style={{ marginBottom: '2rem' }}>HAVE A QUESTION? THEN THERE IS AN ANSWER!</h4>
+          <h4 style={{ marginBottom: '2rem' }}>Drop me a message</h4>
 
           <form
             style={{

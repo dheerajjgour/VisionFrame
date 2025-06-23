@@ -22,7 +22,7 @@ useEffect(() => {
         <div className='container'>
           <div className='wrapper'>
             <div className='gif-wrapper' >
-              <img src='/lightspeed-10958_256.gif'></img>
+              <img src='/Mask-group.png'></img>
             </div>
             <div class="curved-text-wrapper">
               <svg viewBox="0 0 600 300" class="curved-text-svg" xmlns="http://www.w3.org/2000/svg">
