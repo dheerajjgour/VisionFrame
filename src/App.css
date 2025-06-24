@@ -96,6 +96,15 @@ font-size: 60px;
 .m-menu-bar::after {
   top: 16px;
 }
+.m-menu-bar.open div {
+    display:none;
+}
+.m-menu-bar.open::before{
+    transform: rotate(45deg)translateY(11px);
+}
+.m-menu-bar.open::after{
+    transform: rotate(-45deg)translateY(-11px);
+}
 ul.m-menu-wrapper {
     position: absolute;
     left: 0;
@@ -492,6 +501,14 @@ footer input{
 .skills .img-wrap img{
   margin-bottom: 30px;
 }
+.skills .img-wrap img {
+  transition: transform 0.4s ease;
+}
+
+.skills .img-wrap:hover img {
+  transform: scaleX(-1);
+}
+
 /* HOME CSS END */
 @media(max-width:767px){
   h3{
@@ -499,6 +516,9 @@ footer input{
   }
   h4 {
     font-size: 30px !important;
+}
+h2 {
+    font-size: 40px !important;
 }
     .hero h1 {
     font-size: 40px;
@@ -546,6 +566,12 @@ footer input{
 }
 .features .row-1 {
     display: block;
+}
+.skills .row-1 {
+    grid-template-columns: 1fr 1fr;
+}
+.skills .text {
+    font-size: 24px;
 }
 }
 @media(max-width:420px){

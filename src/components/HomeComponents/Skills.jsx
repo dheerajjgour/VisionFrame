@@ -65,6 +65,7 @@ function Skills() {
 ];
 
   return (
+    
     <section className="skills">
       <div className="wrapper container">
         <h2 style={{textAlign:"center", marginBottom:"30px"}}>Skills</h2>

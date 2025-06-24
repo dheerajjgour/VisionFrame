@@ -46,7 +46,7 @@ const Hero = () => {
 
   return (
     <>
-      <div ref={heroRef} className="hero">
+      <div ref={heroRef} className="hero" id="hero">
         <div className="row-2">
           <img
             ref={imgRef}

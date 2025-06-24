@@ -4,7 +4,7 @@ import Spinner from "../Spinner";
 function Model() {
   return (
     <>
-      <section className="modelviewer">
+      <section className="modelviewer" id='Service'>
         <div className="container">
           <h3 style={{textAlign:"center"}}>Services</h3>
           <div className="row-1">

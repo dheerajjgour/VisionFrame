@@ -16,14 +16,14 @@ function Header() {
           </div>
 
           <ul className='menu-wrapper'>
-            <li>About</li>
-            <li>Service</li>
-            <li>Contact</li>
+            <li><a href='#hero'>Home</a></li>
+            <li><a href='#Service'>Service</a></li>
+            <li ><a href='#Contact'>Contact</a></li>
           </ul>
         </div>
 
         <div className="mobile-menu">
-          <span className='m-menu-bar' onClick={toggleMenu}>
+          <span className={`m-menu-bar ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <div></div>
           </span>
 

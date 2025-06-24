@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row-1" style={{ textAlign: 'center' }}>
+        <div className="row-1" id='Contact' style={{ textAlign: 'center' }}>
           <h4 style={{ marginBottom: '2rem' }}>Drop me a message</h4>
 
           <form
