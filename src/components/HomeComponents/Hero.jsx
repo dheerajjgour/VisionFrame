@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
         <div className="container row-1">
           <div className="wrapper">
-            <h1 className="hero-title">ASHWIN SHARMA</h1>
+            <h1 className="hero-title">ASHVIN SHARMA</h1>
             <div className="wrapper-2">
               <p className="hero-text">
                 Choose me for my extensive expertise and innovative approach,
@@ -77,10 +77,10 @@ const Hero = () => {
           <div className="wrapper">
             <div className="marquee _1">
               <div className="text">
+                <h2>Ashvin Sharma</h2>
+                <h2 className="fill">Ashvin Sharma</h2>
                 <h2>Ashwin Sharma</h2>
-                <h2 className="fill">Ashwin Sharma</h2>
-                <h2>Ashwin Sharma</h2>
-                <h2 className="fill">Ashwin Sharma</h2>
+                <h2 className="fill">Ashvin Sharma</h2>
               </div>
             </div>
 
