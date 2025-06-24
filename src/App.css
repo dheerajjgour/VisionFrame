@@ -11,8 +11,11 @@ body, html {
   background-color:darksalmon;
   color: #ffff;
   line-height: 1.4em;
-  scroll-behavior: smooth;
+
 }
+/* html{
+  scroll-behavior: smooth;
+} */
 .header ul a{
     text-decoration: none;
     list-style: none;
