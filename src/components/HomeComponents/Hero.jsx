@@ -59,16 +59,12 @@ const Hero = () => {
             <h1 className="hero-title">ASHVIN SHARMA</h1>
             <div className="wrapper-2">
               <p className="hero-text">
-                Choose me for my extensive expertise and innovative approach,
-                delivering personalized solutions that align with your unique
-                needs. I am customer-focused, ensuring open communication and
-                reliable timelines throughout the project. With meticulous
-                attention to detail, I consistently deliver high-quality results
-                on time and within your budget. My proven track record of
-                successful projects and satisfied clients showcases my
-                commitment to excellence.
+                In a sea of talent, my dedication to excellence, creativity, and
+                client-focused mindset stand out, making me the ideal choice for
+                bringing your vision to life. Let's embark on a transformative
+                journey together!"
               </p>
-              <Spinner text="Lorem" />
+              <Spinner text="Contact" color={"#fff"} />
             </div>
           </div>
         </div>

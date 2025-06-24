@@ -26,6 +26,7 @@ const testimonials = [
     text: "He was great, He worked fast and did everything he could make sure we were satisfied.",
     position:"T-shirt Kings",
   },
+  
 ];
 
   useEffect(() => {
@@ -83,8 +84,9 @@ const testimonials = [
 
   return (
   <section className="testimonial" style={{textAlign:"center"}}>
+    <div className='row-1 container'>
     <h2 style={{textAlign:"center", marginBottom:"50px"}}>People talk about me</h2>
-    <div className="carousel-slider swiper container" ref={sliderRef}>
+    <div className="carousel-slider swiper" ref={sliderRef}>
       <div className="swiper-wrapper">
         {testimonials.map((item, idx) => (
           <div className="swiper-slide" key={idx}>
@@ -96,6 +98,7 @@ const testimonials = [
           </div>
         ))}
       </div>
+    </div>
     </div>
   </section>
 );

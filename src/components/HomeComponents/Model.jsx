@@ -30,7 +30,7 @@ function Model() {
                 I can help you build brand authority and visibility. You are
                 only one click away from your target audience.
               </p>
-              <Spinner text="Lorem ipsum" />
+              <Spinner text="Contact" color={"#ffa07a"}/>
             </div>
           </div>
           <div className="row-4">

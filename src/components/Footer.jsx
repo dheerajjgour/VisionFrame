@@ -144,7 +144,7 @@ const Footer = () => {
                 transition: 'background 0.3s ease',
               }}
               onMouseOver={(e) => (e.target.style.backgroundColor = '#555')}
-              onMouseOut={(e) => (e.target.style.backgroundColor = '#333')}
+              onMouseOut={(e) => (e.target.style.backgroundColor = '#1d1d1d')}
             >
               Submit
             </button>
