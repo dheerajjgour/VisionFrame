@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
-
+import { useEffect } from 'react';
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false); // toggle state
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen); // toggle value
   };
+  useEffect(() => {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+}, []);
+
 
   return (
     <div className='header'>
