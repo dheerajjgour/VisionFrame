@@ -16,9 +16,9 @@ function Header() {
           </div>
 
           <ul className='menu-wrapper'>
-            <li><a href='#hero'>Home</a></li>
-            <li><a href='#Service'>Service</a></li>
-            <li ><a href='#Contact'>Contact</a></li>
+            <li>Home</li>
+            <li>Service</li>
+            <li >Contact</li>
           </ul>
         </div>
 
