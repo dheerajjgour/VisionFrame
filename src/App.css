@@ -11,7 +11,9 @@ body, html {
   background-color:var(--color-bg-secondary);
   color: #ffff;
   line-height: 1.4em;
-
+}
+body{
+  overflow-x:hidden;
 }
 :root {
   --color-bg-primary: #1d1d1d;
@@ -38,7 +40,6 @@ font-size: 60px;
     font-size: 45px;
     line-height: 1em;
     letter-spacing: -2px;
-    font-family: cursive;
 }
 .container{
   max-width: 1400px;
@@ -180,7 +181,7 @@ ul.m-menu-wrapper li{
   font-size:150px;
   text-transform: uppercase;
   line-height: 0.9em;
-  font-family: cursive;
+
 }
 .hero .row-1 .wrapper{
   display: grid;
@@ -205,6 +206,9 @@ ul.m-menu-wrapper li{
     align-items: center;
     justify-content: flex-start;
     --button-goto-duration: 0.5s;
+}
+.styles_button_goto__Md1Tq:hover .styles_arrow__nhjkx path{
+    stroke:#000 !important;
 }
 .styles_button_goto__bg__l7ZhW {
     position: relative;
@@ -232,11 +236,14 @@ span.styles_arrow__nhjkx.undefined.styles_kind_default__gbx2m {
 .styles_button_goto__text__iRwOa:not(.styles_text_inside__74Opp) {
     margin-left: 1.25rem;
 }
+.styles_button_goto__Md1Tq {
+  text-decoration: none;
+}
+
 .styles_button_goto__text__iRwOa {
     position: relative;
     z-index: 1;
     display: inline-block;
-    font-family: Cervo;
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
@@ -613,7 +620,56 @@ footer input{
   color: #fff;
   gap:10px;
 }
-
+/* PROJECT CSS START */
+.project {
+    background: var(--color-bg-primary);
+    padding: 50px 0 90px 0;
+}
+.project img {
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+}
+.project .slick-track{
+  display: flex;
+  gap:20px;
+}
+.project .slick-slide, .project .slick-slide .col {
+    position:relative;
+    
+}
+.project .slick-slide .col:before{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    background: #000000d1;
+    z-index:11;
+    border-radius: 15px;
+    opacity:0;
+    transition:0.5s ease-in-out;
+}
+.project .slick-slide p{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    font-size:32px;
+    opacity:0;
+    transition:0.5s ease-in-out;
+    z-index:11;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+.project .slick-slide a{
+  color:#fff;
+  text-decoration: none;
+}
+.project .slick-slide:hover p, .project .slick-slide:hover .col:before{
+    opacity:1;
+}
+/* PROJECT CSS END */
 /* SWIPER CSS START */
 @media(max-width:767px){
   p{
@@ -655,8 +711,14 @@ h2 {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
 }
+.hero .row-2 {
+    margin-bottom: 0px !important;
+}
 .hero .row-1 {
     margin-top: -150%;
+}
+.hero {
+     padding-bottom: 0px !important;
 }
 .hero-text {
     max-width: 100%;
@@ -686,6 +748,19 @@ h2 {
 }
 .features .col-2 .wrapper-1 {
     flex-direction: column;
+}
+.project .slick-track {
+    gap: 0px;
+}
+.slick-next {
+    right: -10px;
+}
+.slick-next {
+    right: -10px;
+}
+.slick-prev {
+    left: -10px;
+    z-index: 10;
 }
 }
 @media(max-width:420px){

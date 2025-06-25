@@ -29,58 +29,60 @@ const testimonials = [
   
 ];
 
-  useEffect(() => {
-    if (!sliderRef.current) return;
+useEffect(() => {
+  if (!sliderRef.current) return;
 
-    const swiper = new Swiper(sliderRef.current, {
-      grabCursor: true,
-      watchSlidesProgress: true,
-      loop: true,
-      slidesPerView: "auto",
-      centeredSlides: true,
-      spaceBetween: 20,
-      initialSlide: 0,
-      on: {
-        progress(e) {
-          const total = e.slides.length;
-          for (let r = 0; r < total; r++) {
-            const slide = e.slides[r];
-            const progress = slide.progress;
-            const absProgress = Math.abs(progress);
-            let scaleFactor = 1;
-            if (absProgress > 1) scaleFactor = 0.3 * (absProgress - 1) + 1;
+  const swiper = new Swiper(sliderRef.current, {
+    grabCursor: true,
+    watchSlidesProgress: true,
+    loop: true,
+    slidesPerView: 3, // FIXED: 3 visible slides
+    centeredSlides: true,
+    spaceBetween: 20,
+    initialSlide: 0,
+    on: {
+      progress(swiperInstance) {
+        const total = swiperInstance.slides.length;
+        for (let i = 0; i < total; i++) {
+          const slide = swiperInstance.slides[i];
+          const progress = slide.progress;
+          const absProgress = Math.abs(progress);
 
-            const offsetX = progress * scaleFactor * 50 + "%";
-            const scale = 1 - 0.2 * absProgress;
-            const zIndex = total - Math.abs(Math.round(progress));
-            const opacity = absProgress > 3 ? 0 : 1;
+          let scaleFactor = 1;
+          if (absProgress > 1) scaleFactor = 0.3 * (absProgress - 1) + 1;
 
-            slide.style.transform = `translateX(${offsetX}) scale(${scale})`;
-            slide.style.zIndex = zIndex;
-            slide.style.opacity = opacity;
+          const offsetX = `${progress * scaleFactor * 50}%`;
+          const scale = 1 - 0.2 * absProgress;
+          const zIndex = total - Math.abs(Math.round(progress));
+          const opacity = absProgress > 3 ? 0 : 1;
 
-            const content = slide.querySelectorAll(".item-content");
-            content.forEach(el => {
-              el.style.opacity = 1 - absProgress / 3;
-            });
-          }
-        },
-        setTransition(e, t) {
-          e.slides.forEach(slide => {
-            slide.style.transitionDuration = `${t}ms`;
-            const content = slide.querySelectorAll(".item-content");
-            content.forEach(el => {
-              el.style.transitionDuration = `${t}ms`;
-            });
+          slide.style.transform = `translateX(${offsetX}) scale(${scale})`;
+          slide.style.zIndex = zIndex;
+          slide.style.opacity = opacity;
+
+          const content = slide.querySelectorAll(".item-content");
+          content.forEach(el => {
+            el.style.opacity = `${1 - absProgress / 3}`;
           });
         }
+      },
+      setTransition(swiperInstance, duration) {
+        swiperInstance.slides.forEach(slide => {
+          slide.style.transitionDuration = `${duration}ms`;
+          const content = slide.querySelectorAll(".item-content");
+          content.forEach(el => {
+            el.style.transitionDuration = `${duration}ms`;
+          });
+        });
       }
-    });
+    }
+  });
 
-    return () => {
-      swiper.destroy(true, true);
-    };
-  }, []);
+  return () => {
+    swiper.destroy(true, true);
+  };
+}, []);
+
 
   return (
   <section className="testimonial" style={{textAlign:"center"}}>

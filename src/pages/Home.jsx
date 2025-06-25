@@ -6,12 +6,14 @@ import Partnership from '../components/HomeComponents/Partnership';
 import ModelViewer from '../components/ModeViewer';
 import Skills from '../components/HomeComponents/Skills';
 import Testimonial from '../components/HomeComponents/Testimonial';
+import Project from '../components/Project';
 
 const Home = () => {
   return (
     <>
       <Hero />
       <Features/>
+       <Project/>
        <Partnership/>
        <Testimonial/>
        <Skills/>

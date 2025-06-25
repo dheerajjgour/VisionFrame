@@ -25,7 +25,7 @@ const Hero = () => {
             { scale: isDesktop ? 3 : 1.2 },
             {
               scale: isDesktop ? 1 : 0.6,
-              y: isDesktop ? 50 : 50,
+              y: isDesktop ? 50 : 0,
               scrollTrigger: {
                 trigger: heroRef.current,
                 start: "top top",

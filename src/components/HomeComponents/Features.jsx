@@ -59,7 +59,7 @@ function Features() {
           <div className="info">Satisfied clients</div>
         </div>
         <div className="a-2">
-          <CountUp end={1800} />
+          <CountUp end={1800} suffix="+"/>
           <div className="info">Projects completed</div>
         </div>
         <div className="a-3">
@@ -67,7 +67,7 @@ function Features() {
           <div className="info">Years of experience</div>
         </div>
         <div className="a-4">
-          <CountUp end={4300} />
+          <CountUp end={4300} suffix="+"/>
           <div className="info">Hours of work</div>
         </div>
       </div>

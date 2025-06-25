@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-function CountUp({ end }) {
+function CountUp({ end, suffix = '' }) {
   const ref = useRef();
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -9,18 +9,18 @@ function CountUp({ end }) {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
           let start = 0;
-          const minDuration = 1;  // seconds
-          const maxDuration = 1;  // seconds
-          const duration = end > 1000 ? minDuration : maxDuration; // fast for big numbers
-          const increment = end / (duration * 60); // 60 fps approx.
+          const minDuration = 1; // seconds
+          const maxDuration = 1;
+          const duration = end > 1000 ? minDuration : maxDuration;
+          const increment = end / (duration * 60);
 
           const step = () => {
             start += increment;
             if (start < end) {
-              ref.current.innerText = Math.floor(start);
+              ref.current.innerText = Math.floor(start) + suffix;
               requestAnimationFrame(step);
             } else {
-              ref.current.innerText = end;
+              ref.current.innerText = end + suffix;
             }
           };
 
@@ -33,9 +33,9 @@ function CountUp({ end }) {
 
     if (ref.current) observer.observe(ref.current);
     return () => ref.current && observer.unobserve(ref.current);
-  }, [end, hasAnimated]);
+  }, [end, suffix, hasAnimated]);
 
-  return <div className="num" ref={ref}>0</div>;
+  return <div className="num" ref={ref}>0{suffix}</div>;
 }
 
 export default CountUp;
