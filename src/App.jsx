@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <SmoothScroll>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/contact" element={<Contact />} /> */}
       </Routes>
       <Footer />
-    </SmoothScroll>
+    </>
   );
 }
 
