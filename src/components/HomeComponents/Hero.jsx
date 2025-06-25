@@ -8,41 +8,49 @@ const Hero = () => {
   const heroRef = useRef(null);
   const imgRef = useRef(null);
 
-  useEffect(() => {
-    const mm = gsap.matchMedia();
+useEffect(() => {
+  const mm = gsap.matchMedia();
 
-    mm.add(
-      {
-        isDesktop: "(min-width: 769px)",
-        isMobile: "(max-width: 768px)",
-      },
-      (context) => {
-        const { isDesktop, isMobile } = context.conditions;
+  mm.add(
+    {
+      isDesktop: "(min-width: 769px)",
+      isMobile: "(max-width: 768px)",
+    },
+    (context) => {
+      const { isDesktop, isMobile } = context.conditions;
 
-        const ctx = gsap.context(() => {
-          gsap.fromTo(
-            imgRef.current,
-            { scale: isDesktop ? 3 : 1.2 },
-            {
-              scale: isDesktop ? 1 : 0.6,
-              y: isDesktop ? 50 : 50,
-              scrollTrigger: {
-                trigger: heroRef.current,
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1,
-              },
-              ease: "power2.out",
-            }
-          );
-        }, heroRef);
+      const ctx = gsap.context(() => {
+        gsap.fromTo(
+          imgRef.current,
+          {
+            scale: isDesktop ? 3 : 1.2,
+          },
+          {
+            scale: isDesktop ? 1 : 0.6,
+            y: 50,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: "top top",
+              end: "bottom bottom",
+              scrub: true,
+              // ADD MOBILE SAFEGUARDS:
+              invalidateOnRefresh: true,
+              markers: false, // turn true if debugging
+              onRefreshInit: () => window.scrollTo(0, 0),
+            },
+          }
+        );
+      }, heroRef);
 
-        return () => ctx.revert(); // Cleanup
-      }
-    );
+      return () => ctx.revert();
+    }
+  );
 
-    return () => mm.revert(); // Remove matchMedia listeners on unmount
-  }, []);
+  ScrollTrigger.refresh(); // ✅ Ensure proper calculation after mount
+  return () => mm.revert();
+}, []);
+
 
   return (
     <>
