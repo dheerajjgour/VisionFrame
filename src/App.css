@@ -33,11 +33,11 @@ font-size: 60px;
     line-height: 1em;
   }
  h3{
-    font-size: 90px;
+    font-size: 45px;
     line-height: 1em;
   }
  h4 {
-    font-size: 45px;
+    font-size: 38px;
     line-height: 1em;
     letter-spacing: -2px;
 }
@@ -761,6 +761,18 @@ h2 {
 .slick-prev {
     left: -10px;
     z-index: 10;
+}
+.skills {
+    padding-bottom: 50px;
+}
+.features {
+    padding-bottom: 50px;
+}
+.modelviewer {
+    border-radius: 0 0 50px 50px;
+}
+.modelviewer .row-1 {
+    position: relative;
 }
 }
 @media(max-width:420px){

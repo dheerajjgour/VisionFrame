@@ -39,7 +39,7 @@ function LogoSlider() {
 
   return (
     <div className="project">
-        <h4 style={{textAlign:"center", marginBottom:"30px"}}>My latest projects</h4>
+        <h2 style={{textAlign:"center", marginBottom:"30px"}}>My latest projects</h2>
         <div className='row-1 container'>
       <Slider {...settings}>
         {slides.map((item, idx) => (
