@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll'; 
 import './App.css';
+import FluidEffect from './components/FluidEffect';
 
 function App() {
   return (

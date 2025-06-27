@@ -775,9 +775,9 @@ h2 {
     position: relative;
 }
 }
-@media(max-width:420px){
+@media(max-width:400px){
 .features img {
-    width: 250px !important
+    width: 270px !important
 }
 }
 @media(min-width:768px){
