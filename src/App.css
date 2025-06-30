@@ -488,7 +488,7 @@ font-weight: 700;
     background-color: var(--color-bg-primary);
     border-radius: 0 0 100px 100px;
     margin-bottom: -130px;
-    z-index: 99;
+    z-index: 99 !important;
     position: relative;
     padding: 50px 0;
 }
@@ -670,6 +670,35 @@ footer input{
     opacity:1;
 }
 /* PROJECT CSS END */
+/* FLUID ANIMATION CSS */
+.fluid{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: #000;
+}
+.fluid canvas{
+  width: 100vw; 
+  height: 100vh;
+}
+section:not(.skill):not(.fluid), footer {
+    z-index:2 ;
+    position: relative;
+}
+.skills, .features{
+   position:unset !important;
+}
+.skills img, .skills h2, .skills .text,.features .row-1 .gif-wrapper, .features .wrapper-1>div, .features .wrapper-2>p{
+    z-index:3;
+    position :relative;
+}
+.curved-text-wrapper svg{
+   z-index:3;
+}
+/* FLUID ANIMATION END */
 /* SWIPER CSS START */
 @media(max-width:767px){
   p{

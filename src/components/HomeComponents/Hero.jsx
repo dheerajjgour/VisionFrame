@@ -55,7 +55,7 @@ useEffect(() => {
 
   return (
     <>
-      <div ref={heroRef} className="hero" id="Home">
+      <section ref={heroRef} className="hero" id="Home">
         <div className="row-2">
           <img
             ref={imgRef}
@@ -108,7 +108,7 @@ useEffect(() => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -40,11 +40,10 @@ function Header() {
             <div></div>
           </span>
 
-          {/* ✅ Toggle class based on state */}
           <ul className={`m-menu-wrapper ${menuOpen ? 'open' : ''}`}>
-            <li>About</li>
-            <li>Service</li>
-            <li>Contact</li>
+             <li><a href='#Home'>Home</a></li>
+            <li><a href='#Service'>Service</a></li>
+            <li ><a href='#Contact'>Contact</a></li>
           </ul>
         </div>
       </div>

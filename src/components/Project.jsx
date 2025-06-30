@@ -38,7 +38,7 @@ function LogoSlider() {
   };
 
   return (
-    <div className="project">
+    <section className="project">
         <h2 style={{textAlign:"center", marginBottom:"30px"}}>My latest projects</h2>
         <div className='row-1 container'>
       <Slider {...settings}>
@@ -50,7 +50,7 @@ function LogoSlider() {
         ))}
       </Slider>
     </div>
-    </div>
+    </section>
   );
 }
 
