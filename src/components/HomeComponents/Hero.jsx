@@ -8,41 +8,50 @@ const Hero = () => {
   const heroRef = useRef(null);
   const imgRef = useRef(null);
 
-  useEffect(() => {
-    const mm = gsap.matchMedia();
+useEffect(() => {
+  const mm = ScrollTrigger.matchMedia(); // updated
 
-    mm.add(
-      {
-        isDesktop: "(min-width: 769px)",
-        isMobile: "(max-width: 768px)",
-      },
-      (context) => {
-        const { isDesktop, isMobile } = context.conditions;
+  mm.add(
+    {
+      isDesktop: "(min-width: 769px)",
+      isMobile: "(max-width: 768px)",
+    },
+    (context) => {
+      const { isDesktop, isMobile } = context.conditions;
 
-        const ctx = gsap.context(() => {
-          gsap.fromTo(
-            imgRef.current,
-            { scale: isDesktop ? 3 : 1.2 },
-            {
-              scale: isDesktop ? 1 : 0.6,
-              y: isDesktop ? 50 : 50,
-              scrollTrigger: {
-                trigger: heroRef.current,
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1,
-              },
-              ease: "power2.out",
-            }
-          );
-        }, heroRef);
+      const ctx = gsap.context(() => {
+        gsap.fromTo(
+          imgRef.current,
+          { scale: isDesktop ? 3 : 1.2 },
+          {
+            scale: isDesktop ? 1 : 0.6,
+            y: isDesktop ? 50 : 50,
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 1,
+              markers: true,
+            },
+            ease: "power2.out",
+          }
+        );
+      }, heroRef);
 
-        return () => ctx.revert(); // Cleanup
-      }
-    );
+      return () => ctx.revert();
+    }
+  );
 
-    return () => mm.revert(); // Remove matchMedia listeners on unmount
-  }, []);
+  const timeout = setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 500);
+
+  return () => {
+    mm.revert();
+    clearTimeout(timeout);
+  };
+}, []);
+
 
   return (
     <>
