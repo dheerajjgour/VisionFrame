@@ -14,7 +14,7 @@ function Model() {
     if (!modelRef.current) return;
 
     gsap.to(modelRef.current.rotation, {
-      y: Math.PI * 2,
+      y: Math.PI * 4,
       scrollTrigger: {
         trigger: '.modelviewer',
         start: 'top center',

@@ -7,7 +7,7 @@ import ModelViewer from '../components/ModeViewer';
 import Skills from '../components/HomeComponents/Skills';
 import Testimonial from '../components/HomeComponents/Testimonial';
 import Project from '../components/Project';
-import FluidEffect from '../components/FluidEffect';
+// import FluidEffect from '../components/FluidEffect';
 
 const Home = () => {
   return (
