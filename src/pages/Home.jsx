@@ -9,6 +9,7 @@ import Testimonial from '../components/HomeComponents/Testimonial';
 import Project from '../components/Project';
 import FluidEffect from '../components/FluidEffect';
 import SmoothScroll from '../components/SmoothScroll';
+import RecentWork from '../components/RecentWork';
 const Home = () => {
   return (
     <>
@@ -16,10 +17,11 @@ const Home = () => {
       <FluidEffect />
         <Hero />
         <Features />
-        <Project />
         <Partnership />
+        <RecentWork/>
         <Testimonial />
         <Skills />
+        
         <Model />
         </SmoothScroll>
     </>

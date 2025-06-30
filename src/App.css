@@ -688,10 +688,10 @@ section:not(.skill):not(.fluid), footer {
     z-index:2 ;
     position: relative;
 }
-.skills, .features{
+.skills, .features, .recent-work{
    position:unset !important;
 }
-.skills img, .skills h2, .skills .text,.features .row-1 .gif-wrapper, .features .wrapper-1>div, .features .wrapper-2>p{
+body h2, body h3 , body p,.skills img, .skills h2, .skills .text,.features .row-1 .gif-wrapper, .features .wrapper-1>div, .features .wrapper-2>p, .recent-work img, .recent-work .title{
     z-index:3;
     position :relative;
 }
@@ -699,6 +699,46 @@ section:not(.skill):not(.fluid), footer {
    z-index:3;
 }
 /* FLUID ANIMATION END */
+/* RECENT WORK CSS START */
+.recent-work {
+    padding: 50px 0;
+  img{
+      max-width: 550px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+.row-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+.row-wrapper>div{
+  margin-bottom:100px;
+  cursor: pointer;
+}
+.row-0{
+  align-self: center !important;
+}
+.row-wrapper>div:nth-child(odd) {
+  align-self: self-start;
+}
+
+.row-wrapper>div:nth-child(even) {
+  align-self: flex-end;
+}
+.title{
+  font-size: 36px;
+  margin-top:15px;
+}
+
+
+
+}
+
+
+/* RECENT WORK CSS END */
 /* SWIPER CSS START */
 @media(max-width:767px){
   p{
