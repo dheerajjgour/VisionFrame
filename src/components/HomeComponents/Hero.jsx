@@ -24,7 +24,7 @@ const Hero = () => {
             imgRef.current,
             { scale: isDesktop ? 3 : 1.2 },
             {
-              scale: isDesktop ? 1 : 0.6,
+              scale: isDesktop ? 1 : 0.1,
               y: isDesktop ? 50 : 50,
               scrollTrigger: {
                 trigger: heroRef.current,
