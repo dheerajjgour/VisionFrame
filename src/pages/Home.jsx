@@ -8,10 +8,11 @@ import Skills from '../components/HomeComponents/Skills';
 import Testimonial from '../components/HomeComponents/Testimonial';
 import Project from '../components/Project';
 import FluidEffect from '../components/FluidEffect';
+import SmoothScroll from '../components/SmoothScroll';
 const Home = () => {
   return (
     <>
-      {/* Fluid effect in background */}
+    <SmoothScroll>
       <FluidEffect />
         <Hero />
         <Features />
@@ -20,6 +21,7 @@ const Home = () => {
         <Testimonial />
         <Skills />
         <Model />
+        </SmoothScroll>
     </>
   );
 };
