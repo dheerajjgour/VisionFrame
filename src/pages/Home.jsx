@@ -21,7 +21,6 @@ const Home = () => {
         <RecentWork/>
         <Testimonial />
         <Skills />
-        
         <Model />
         </SmoothScroll>
     </>

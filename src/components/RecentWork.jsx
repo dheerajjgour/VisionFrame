@@ -2,8 +2,7 @@ import React from 'react'
 
 function RecentWork() {
     const project = [
-    { title: 'OutLoud', image: '/OutLoud.png', url:'https://outloud.global/'
-    },
+    { title: 'OutLoud', image: '/OutLoud.png', url:'https://outloud.global/'},
     { title: '360Hoops', image: '/360Hoops.png', url:'play360hoops.com' },
     { title: 'SharpHead', image: '/SharpHead.png', url:'https://sharphead.co/'},
     { title: 'NiloHealth', image: '/NiloHealth.png',url:'https://nilohealth.com/' },
