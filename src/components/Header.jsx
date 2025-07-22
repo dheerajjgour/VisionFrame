@@ -31,6 +31,7 @@ function Header() {
           <ul className='menu-wrapper'>
             <li><a href='#Home'>Home</a></li>
             <li><a href='#Service'>Service</a></li>
+            <li ><a href='#Project'>Project</a></li>
             <li ><a href='#Contact'>Contact</a></li>
           </ul>
         </div>
@@ -43,6 +44,7 @@ function Header() {
           <ul className={`m-menu-wrapper ${menuOpen ? 'open' : ''}`}>
              <li><a href='#Home'>Home</a></li>
             <li><a href='#Service'>Service</a></li>
+             <li ><a href='#Project'>Project</a></li>
             <li ><a href='#Contact'>Contact</a></li>
           </ul>
         </div>

@@ -91,7 +91,7 @@ useEffect(() => {
 
             <div className="marquee _2">
               <div className="text">
-                <h2>Ashwin Sharma</h2>
+                <h2>Ashvin Sharma</h2>
                 <h2 className="fill">FullStack Developer</h2>
                 <h2>FullStack Developer</h2>
                 <h2 className="fill">FullStack Developer</h2>

@@ -3,62 +3,62 @@ import React from "react";
 function Skills() {
     const content = [
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/wordpress-logo.png",
+    img: "/skills-img/wordpress-logo.png",
     alt: "Wordpress",
     label: "Wordpress"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/Group-48095498.png",
+    img: "/skills-img/Group-48095498.png",
     alt: "Shopify",
     label: "Shopify"
   },
   {
-    img: "	https://ashvinsharma.com/wp-content/uploads/2025/04/Figma-logo.png",
+    img: "/skills-img/Figma-logo.png",
     alt: "Figma",
     label: "Figma"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/ReactJS.png",
+    img: "/skills-img/ReactJS.png",
     alt: "React",
     label: "React"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/Vector-3.png",
+    img: "/skills-img/Vector-3.png",
     alt: "HubSpot",
     label: "HubSpot"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/Weblow.png",
+    img: "/skills-img/Weblow.png",
     alt: "Webflow",
     label: "Webflow"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/Prestashop.png",
+    img: "/skills-img/Prestashop.png",
     alt: "Prestashop",
     label: "Prestashop"
   },
     {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/PHP.png",
+    img: "/skills-img/PHP.png",
     alt: "Php/SQL",
     label: "Php/SQL"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/Adobe-logo-1.png",
+    img: "/skills-img/Adobe-logo.jpg",
     alt: "Photoshop",
     label: "Photoshop"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/XMLID_1_.png",
+    img: "/skills-img/XMLID_1_.png",
     alt: "Laravel",
     label: "Laravel"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/Adobe-logo.jpg",
+    img: "/skills-img/Adobe-logo-1.png",
     alt: "Adobe XD",
     label: "Adobe XD"
   },
   {
-    img: "https://ashvinsharma.com/wp-content/uploads/2025/04/adobe-illustrator-logo.png",
+    img: "/skills-img/adobe-illustrator-logo.png",
     alt: "Illustrator",
     label: "Illustrator"
   },
