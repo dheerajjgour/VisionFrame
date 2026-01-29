@@ -24,8 +24,8 @@ useEffect(() => {
           imgRef.current,
           { scale: isDesktop ? 3 : 1.2 },
           {
-            scale: isDesktop ? 1 : 0.6,
-            y: isDesktop ? 50 : 50,
+            scale: isDesktop ? 0.7 : 0.3,
+            y: isDesktop ? 50 : 90,
             scrollTrigger: {
               trigger: heroRef.current,
               start: "top top",
@@ -59,7 +59,7 @@ useEffect(() => {
         <div className="row-2">
           <img
             ref={imgRef}
-            src="/banner.jpg"
+            src="/banner-d.png"
             style={{ transformOrigin: "center center" }}
           ></img>
         </div>

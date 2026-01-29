@@ -61,7 +61,7 @@ font-size: 60px;
   z-index: 999;
 }
 .header .logo{
-  width: 150px;
+  max-width: 100px;
   height: 80px;
   position: relative;
 }
@@ -82,12 +82,11 @@ font-size: 60px;
     position:relative;
 }
 .header .logo img{
-  max-width: 150px;
+  max-width: 120px;
       object-fit: contain;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    filter: brightness(1) invert(1);
 }
 .header .wrapper{
   display: flex;
@@ -627,6 +626,75 @@ footer input{
   color: #fff;
   gap:10px;
 }
+/* Arrow base */
+.custom-prev,
+.custom-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+
+  transition: 
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Positioning */
+.custom-prev {
+  /* left: -70px; */
+}
+
+.custom-next {
+  /* right: -70px; */
+}
+
+/* Arrow icons */
+.custom-prev::after,
+.custom-next::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Hover effect */
+.custom-prev:hover,
+.custom-next:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+/* Disabled state */
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .custom-prev,
+  .custom-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .custom-prev {
+    left: 10px;
+  }
+
+  .custom-next {
+    right: 10px;
+  }
+}
+
 /* PROJECT CSS START */
 .project {
     background: var(--color-bg-primary);
@@ -709,6 +777,7 @@ body h2, body h3 , body p,.skills img, .skills h2, .skills .text,.features .row-
 /* RECENT WORK CSS START */
 .recent-work {
     padding: 50px 0;
+    padding-bottom: 0;
   img{
       max-width: 550px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
@@ -756,17 +825,17 @@ body h2, body h3 , body p,.skills img, .skills h2, .skills .text,.features .row-
   p{
     font-size: 16px !important;
   }
-  .testimonial{
-    display: none;
+  .testimonial .row-1{
+    padding:0 !important;
   }
   h3{
-    font-size: 35px !important;
+    font-size: 30px !important;
   }
   h4 {
-    font-size: 30px !important;
+    font-size: 26px !important;
 }
 h2 {
-    font-size: 40px !important;
+    font-size: 34px !important;
 }
     .hero h1 {
     font-size: 40px;
@@ -776,6 +845,9 @@ h2 {
 .spinner svg.styles_circles___YFtV {
     width: 100px !important;
     height: 100px;
+}
+.header .logo img {
+    max-width: 80px;
 }
 .header .container{
   display: flex;
@@ -801,12 +873,17 @@ h2 {
 .hero {
      padding-bottom: 0px !important;
 }
+.hero .row-3 .wrapper{
+  height: 60vh;
+}
+
 .hero-text {
     max-width: 100%;
     margin-bottom: 15px;
 }
     .hero .row-1 .wrapper {
     display: block;
+    padding-top: 13.5rem;
 }
 .partnership .row-1 {
     display: block;
@@ -856,10 +933,16 @@ h2 {
       max-width: 300px;
 }
 .recent-work .title {
-    font-size: 24px;
+    font-size: 22px;
+}
+.recent-work .row-wrapper {
+    width: 100%;
 }
 .recent-work  .row-wrapper>div {
     margin-bottom: 50px;
+}
+.carousel-slider .swiper-slide {
+  height:100%;
 }
 }
 @media(max-width:400px){

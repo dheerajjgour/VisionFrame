@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import Swiper from 'swiper';
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 import 'swiper/css'; // Core Swiper CSS
 import 'swiper/css/free-mode'; // If you're using extra modules
 
@@ -32,52 +36,88 @@ const testimonials = [
 useEffect(() => {
   if (!sliderRef.current) return;
 
-  const swiper = new Swiper(sliderRef.current, {
-    grabCursor: true,
-    watchSlidesProgress: true,
-    loop: true,
-    slidesPerView: 3, // FIXED: 3 visible slides
-    centeredSlides: true,
-    spaceBetween: 20,
-    initialSlide: 0,
-    on: {
-      progress(swiperInstance) {
-        const total = swiperInstance.slides.length;
-        for (let i = 0; i < total; i++) {
-          const slide = swiperInstance.slides[i];
-          const progress = slide.progress;
-          const absProgress = Math.abs(progress);
+const swiper = new Swiper(sliderRef.current, {
+  modules: [Navigation],
 
-          let scaleFactor = 1;
-          if (absProgress > 1) scaleFactor = 0.3 * (absProgress - 1) + 1;
+  grabCursor: true,
+  watchSlidesProgress: true,
+  loop: true,
+  centeredSlides: true,
+  initialSlide: 0,
 
-          const offsetX = `${progress * scaleFactor * 50}%`;
-          const scale = 1 - 0.2 * absProgress;
-          const zIndex = total - Math.abs(Math.round(progress));
-          const opacity = absProgress > 3 ? 0 : 1;
+  navigation: {
+    nextEl: ".custom-next",
+    prevEl: ".custom-prev",
+  },
 
-          slide.style.transform = `translateX(${offsetX}) scale(${scale})`;
-          slide.style.zIndex = zIndex;
-          slide.style.opacity = opacity;
+  // ✅ RESPONSIVE SETTINGS
+  breakpoints: {
+    // Mobile
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+    },
 
-          const content = slide.querySelectorAll(".item-content");
-          content.forEach(el => {
-            el.style.opacity = `${1 - absProgress / 3}`;
-          });
-        }
-      },
-      setTransition(swiperInstance, duration) {
-        swiperInstance.slides.forEach(slide => {
-          slide.style.transitionDuration = `${duration}ms`;
-          const content = slide.querySelectorAll(".item-content");
-          content.forEach(el => {
-            el.style.transitionDuration = `${duration}ms`;
-          });
+    // Tablet
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+
+    // Desktop
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+
+  on: {
+    progress(swiperInstance) {
+      const total = swiperInstance.slides.length;
+
+      swiperInstance.slides.forEach(slide => {
+        const progress = slide.progress;
+        const absProgress = Math.abs(progress);
+
+        let scaleFactor = 1;
+        if (absProgress > 1) scaleFactor = 0.3 * (absProgress - 1) + 1;
+
+        const offsetX = `${progress * scaleFactor * 50}%`;
+
+        // 🔥 Reduce scaling effect on mobile
+        const scale =
+          window.innerWidth < 640
+            ? 1 - 0.1 * absProgress
+            : 1 - 0.2 * absProgress;
+
+        const zIndex = total - Math.abs(Math.round(progress));
+        const opacity = absProgress > 3 ? 0 : 1;
+
+        slide.style.transform = `translateX(${offsetX}) scale(${scale})`;
+        slide.style.zIndex = zIndex;
+        slide.style.opacity = opacity;
+
+        slide.querySelectorAll(".item-content").forEach(el => {
+          el.style.opacity = `${1 - absProgress / 3}`;
         });
-      }
-    }
-  });
+      });
+    },
 
+    setTransition(swiperInstance, duration) {
+      swiperInstance.slides.forEach(slide => {
+        slide.style.transitionDuration = `${duration}ms`;
+        slide.querySelectorAll(".item-content").forEach(el => {
+          el.style.transitionDuration = `${duration}ms`;
+        });
+      });
+    }
+  }
+});
+
+
+
+
+  
   return () => {
     swiper.destroy(true, true);
   };
@@ -100,6 +140,8 @@ useEffect(() => {
           </div>
         ))}
       </div>
+      <div className="swiper-button-prev custom-prev"></div>
+  <div className="swiper-button-next custom-next"></div>
     </div>
     </div>
   </section>

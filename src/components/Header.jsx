@@ -25,7 +25,9 @@ function Header() {
       <div className='container'>
         <div className='wrapper'>
           <div className="logo">
-            <img src="/LOGO-1.png" alt="Logo" />
+            <a href="/">
+  <img src="/logo-w.png" alt="Logo"/>
+</a>
           </div>
 
           <ul className='menu-wrapper'>
