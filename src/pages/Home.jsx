@@ -10,10 +10,12 @@ import Project from '../components/Project';
 import FluidEffect from '../components/FluidEffect';
 import SmoothScroll from '../components/SmoothScroll';
 import RecentWork from '../components/RecentWork';
+import Contact from '../components/Contact';
+import Api from '../components/Api';
 const Home = () => {
   return (
     <>
-    <SmoothScroll>
+    {/* <SmoothScroll> */}
       <FluidEffect />
         <Hero />
         <Features />
@@ -22,7 +24,8 @@ const Home = () => {
         <Testimonial />
         <Skills />
         <Model />
-        </SmoothScroll>
+        <Contact/>
+        {/* </SmoothScroll> */}
     </>
   );
 };

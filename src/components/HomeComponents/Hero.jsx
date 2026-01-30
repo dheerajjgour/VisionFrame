@@ -59,7 +59,7 @@ useEffect(() => {
         <div className="row-2">
           <img
             ref={imgRef}
-            src="/banner-d.png"
+            src="/home-banner.png"
             style={{ transformOrigin: "center center" }}
           ></img>
         </div>

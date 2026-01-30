@@ -1,154 +1,71 @@
-import React, { useState } from 'react';
+import React from "react";
+import { FaInstagram, FaLinkedinIn, FaFacebookF, FaXTwitter, FaSkype } from "react-icons/fa6";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    address: '',
-    city: '',
-    name: '',
-    phone: '',
-    email: '',
-  });
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Form submitted!');
-    console.log(formData);
-  };
-
   return (
     <footer>
       <div className="container">
-        <div className="row-1" id='Contact' style={{ textAlign: 'center' }}>
-          <h2 style={{ marginBottom: '2rem' }}>Drop me a message</h2>
-
-          <form
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem',
-              margin: '0 auto',
-            }}
-            onSubmit={handleSubmit}
-          >
-            <div
-              className="address-wrapper"
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '3fr 1fr',
-                gap: '50px',
-              }}
-            >
-              <div
-                className="form-address"
-                style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}
-              >
-                <label htmlFor="address">Address</label>
-                <input
-                  id="address"
-                  type="text"
-                  value={formData.address}
-                  onChange={handleChange}
-                  style={{
-                    padding: '0.75rem 0',
-                    fontSize: '1rem',
-                  }}
-                />
-              </div>
-
-              <div
-                className="form-city"
-                style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}
-              >
-                <label htmlFor="city">City</label>
-                <input
-                  id="city"
-                  type="text"
-                  value={formData.city}
-                  onChange={handleChange}
-                  style={{
-                    padding: '0.75rem 0',
-                    fontSize: '1rem',
-                  }}
-                />
-              </div>
+        <div className="row-1">
+          <div className="col-1">
+            <h5>Let’s make <br/>
+            something <br/>amazing together.</h5>
+          </div>
+          <div className="col-2">
+            <h5>QUICK LINKS</h5>
+             <ul>
+             <li><a href='#Home'>Home</a></li>
+            <li><a href='#Service'>Service</a></li>
+             <li ><a href='#Project'>Project</a></li>
+            <li ><a href='#Contact'>Contact</a></li>
+          </ul>
+          </div>
+          <div className="col-3">
+            <div className="add-wrapper">
+            <h5>Address</h5>
+            <p>1301, Skye Corporate Park, Plot No. 25, Scheme No. 78-II, AB Road, Indore, India.</p>
             </div>
-
-            <div
-              className="form-name"
-              style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}
-            >
-              <label htmlFor="name">Your name</label>
-              <input
-                id="name"
-                type="text"
-                value={formData.name}
-                onChange={handleChange}
-                style={{
-                  padding: '0.75rem 0',
-                  fontSize: '1rem',
-                }}
-              />
+              <div className="phone-wrapper">
+            <h5>Phone</h5>
+            <p>9171399990</p>
             </div>
-
-            <div
-              className="form-phone"
-              style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}
-            >
-              <label htmlFor="phone">Phone</label>
-              <input
-                id="phone"
-                type="tel"
-                value={formData.phone}
-                onChange={handleChange}
-                style={{
-                  padding: '0.75rem 0',
-                  fontSize: '1rem',
-
-                }}
-              />
+              <div className="phone-wrapper">
+            <h5>E-mail</h5>
+            <p>hello@ashvinsharma.com</p>
             </div>
+          </div>
+        </div>
+        <div className="row-2">
+          <div className="col-1">
+            <p>Start by saying hi</p>
+          </div>
+<div className="col-2">
+  <div className="social-wrapper">
+    <a href="https://www.instagram.com/ashvin0731/" className="social-icon" target="_blank" rel="noreferrer">
+      <FaInstagram />
+    </a>
 
-            <div
-              className="form-mail"
-              style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}
-            >
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                style={{
-                  padding: '0.75rem 0',
-                  fontSize: '1rem',
-                }}
-              />
-            </div>
+    <a href="https://linkedin.com" className="social-icon" target="_blank" rel="noreferrer">
+      <FaLinkedinIn />
+    </a>
 
-            <button
-              type="submit"
-              style={{
-                padding: '0.75rem 1.5rem',
-                fontSize: '1rem',
-                marginTop: '30px',
-                backgroundColor: '#333',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                transition: 'background 0.3s ease',
-              }}
-              onMouseOver={(e) => (e.target.style.backgroundColor = '#555')}
-              onMouseOut={(e) => (e.target.style.backgroundColor = '#1d1d1d')}
-            >
-              Submit
-            </button>
-          </form>
+    <a href="https://www.facebook.com/ashvin.sharma.31" className="social-icon" target="_blank" rel="noreferrer">
+      <FaFacebookF />
+    </a>
+
+    <a href="https://twitter.com" className="social-icon" target="_blank" rel="noreferrer">
+      <FaXTwitter />
+    </a>
+
+
+  </div>
+</div>
+
+
+        </div>
+        <div className="row-3">
+          <div className="col-1">
+            <p>Copyright © 2026 Ashvin Sharma ,All Rights Reserved</p>
+          </div>
         </div>
       </div>
     </footer>
