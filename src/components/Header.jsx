@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 function Header() {
-  const [menuOpen, setMenuOpen] = useState(false); // toggle state
+  const [menuOpen, setMenuOpen] = useState(false); 
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen); // toggle value
+    setMenuOpen(!menuOpen); 
   };
   useEffect(() => {
   const links = document.querySelectorAll('a[href^="#"]');
