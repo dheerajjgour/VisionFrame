@@ -15,7 +15,7 @@ import Api from '../components/Api';
 const Home = () => {
   return (
     <>
-    <SmoothScroll>
+    {/* <SmoothScroll> */}
       <FluidEffect />
         <Hero />
         <Features />
@@ -25,7 +25,7 @@ const Home = () => {
         <Skills />
         <Model />
         <Contact/>
-        </SmoothScroll>
+        {/* </SmoothScroll> */}
     </>
   );
 };
