@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import gsap from "gsap";
-import CountUp from '../CountUp';
+import CountUp from "../CountUp";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 function Features() {
   gsap.registerPlugin(ScrollTrigger);
@@ -53,31 +53,37 @@ function Features() {
             </div>
           </div>
           <div className="col-2">
-      <div className="wrapper-1">
-        <div className="a-1">
-          <CountUp end={120} />
-          <div className="info">Satisfied clients</div>
-        </div>
-        <div className="a-2">
-          <CountUp end={1800} suffix="+"/>
-          <div className="info">Projects completed</div>
-        </div>
-        <div className="a-3">
-          <CountUp end={13} />
-          <div className="info">Years of experience</div>
-        </div>
-        <div className="a-4">
-          <CountUp end={4300} suffix="+"/>
-          <div className="info">Hours of work</div>
-        </div>
-      </div>
-      <div className="wrapper-2">
-        <p>
-          I’m Ashvin Sharma, a Fullstack developer who loves creating clean, modern,
-          and user-focused digital experiences...
-        </p>
-      </div>
-    </div>
+            <div className="wrapper-1">
+              <div className="a-1">
+                <CountUp end={120} suffix="+" />
+                <div className="info">Satisfied clients</div>
+              </div>
+              <div className="a-2">
+                <CountUp end={1800} suffix="+" />
+                <div className="info">Projects completed</div>
+              </div>
+              <div className="a-3">
+                <CountUp end={13} suffix="+"/>
+                <div className="info">Years of experience</div>
+              </div>
+              <div className="a-4">
+                <CountUp end={4300} suffix="+" />
+                <div className="info">Hours of work</div>
+              </div>
+            </div>
+            <div className="wrapper-2">
+              <p>
+                I’m a full stack developer specializing in modern
+                JavaScript, and responsive web design. I enjoy transforming
+                ideas into interactive, scalable, and performance-optimized web
+                experiences. Over the years, I’ve worked on business websites,
+                e-commerce platforms, landing pages, and interactive UI
+                projects. My focus is always on usability, speed, and clean
+                design. I believe great websites are not just functional — they
+                should feel smooth, intuitive, and memorable.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </>

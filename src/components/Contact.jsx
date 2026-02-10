@@ -61,8 +61,11 @@ const Contact = () => {
     <section className='contact'>
       <div className="container">
         <div className="row-1" id='Contact' style={{ textAlign: 'center' }}>
+          <div className='col-1'>
           <h2 style={{ marginBottom: '2rem' }}>Drop me a message</h2>
-
+          <p style={{textAlign:"left"}}>Have a project idea, collaboration opportunity, or business inquiry?
+Feel free to reach out. I’d love to discuss how we can work together.</p>
+</div>
           <form
             style={{
               display: 'flex',
@@ -92,7 +95,7 @@ const Contact = () => {
                   required
                   value={formData.address}
                   onChange={handleChange}
-                  style={{ padding: '0.75rem 0', fontSize: '1rem' }}
+                  style={{ padding: '0.75rem 10px', fontSize: '1rem' }}
                 />
               </div>
 
@@ -107,7 +110,7 @@ const Contact = () => {
                   required
                   value={formData.city}
                   onChange={handleChange}
-                  style={{ padding: '0.75rem 0', fontSize: '1rem' }}
+                  style={{ padding: '0.75rem 10px', fontSize: '1rem' }}
                 />
               </div>
             </div>
@@ -124,7 +127,7 @@ const Contact = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                style={{ padding: '0.75rem 0', fontSize: '1rem' }}
+                style={{ padding: '0.75rem 10px', fontSize: '1rem' }}
               />
             </div>
 
@@ -139,7 +142,7 @@ const Contact = () => {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                style={{ padding: '0.75rem 0', fontSize: '1rem' }}
+                style={{ padding: '0.75rem 10px', fontSize: '1rem' }}
               />
             </div>
 
@@ -155,7 +158,7 @@ const Contact = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                style={{ padding: '0.75rem 0', fontSize: '1rem' }}
+                style={{ padding: '0.75rem 10px', fontSize: '1rem' }}
               />
             </div>
 

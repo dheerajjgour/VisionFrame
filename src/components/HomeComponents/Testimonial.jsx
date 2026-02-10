@@ -127,7 +127,7 @@ const swiper = new Swiper(sliderRef.current, {
   return (
   <section className="testimonial" style={{textAlign:"center"}}>
     <div className='row-1 container'>
-    <h2 style={{textAlign:"center", marginBottom:"50px"}}>People talk about me</h2>
+    <h2 style={{textAlign:"center", marginBottom:"50px"}}>What Clients Say About My Work</h2>
     <div className="carousel-slider swiper" ref={sliderRef}>
       <div className="swiper-wrapper">
         {testimonials.map((item, idx) => (

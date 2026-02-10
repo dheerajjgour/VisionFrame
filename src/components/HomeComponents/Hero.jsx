@@ -8,50 +8,49 @@ const Hero = () => {
   const heroRef = useRef(null);
   const imgRef = useRef(null);
 
-useEffect(() => {
-  const mm = ScrollTrigger.matchMedia(); // updated
+  useEffect(() => {
+    const mm = ScrollTrigger.matchMedia(); // updated
 
-  mm.add(
-    {
-      isDesktop: "(min-width: 769px)",
-      isMobile: "(max-width: 768px)",
-    },
-    (context) => {
-      const { isDesktop, isMobile } = context.conditions;
+    mm.add(
+      {
+        isDesktop: "(min-width: 769px)",
+        isMobile: "(max-width: 768px)",
+      },
+      (context) => {
+        const { isDesktop, isMobile } = context.conditions;
 
-      const ctx = gsap.context(() => {
-        gsap.fromTo(
-          imgRef.current,
-          { scale: isDesktop ? 3 : 1.2 },
-          {
-            scale: isDesktop ? 0.7 : 0.3,
-            y: isDesktop ? 50 : 90,
-            scrollTrigger: {
-              trigger: heroRef.current,
-              start: "top top",
-              end: "bottom bottom",
-              scrub: 1,
-              markers: false,
+        const ctx = gsap.context(() => {
+          gsap.fromTo(
+            imgRef.current,
+            { scale: isDesktop ? 2.6 : 1.2 },
+            {
+              scale: isDesktop ? 0.7 : 0.5,
+              y: isDesktop ? 50 : 90,
+              scrollTrigger: {
+                trigger: heroRef.current,
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1,
+                markers: false,
+              },
+              ease: "power2.out",
             },
-            ease: "power2.out",
-          }
-        );
-      }, heroRef);
+          );
+        }, heroRef);
 
-      return () => ctx.revert();
-    }
-  );
+        return () => ctx.revert();
+      },
+    );
 
-  const timeout = setTimeout(() => {
-    ScrollTrigger.refresh();
-  }, 500);
+    const timeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
 
-  return () => {
-    mm.revert();
-    clearTimeout(timeout);
-  };
-}, []);
-
+    return () => {
+      mm.revert();
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
     <>
@@ -68,10 +67,11 @@ useEffect(() => {
             <h1 className="hero-title">ASHVIN SHARMA</h1>
             <div className="wrapper-2">
               <p className="hero-text">
-                In a sea of talent, my dedication to excellence, creativity, and
-                client-focused mindset stand out, making me the ideal choice for
-                bringing your vision to life. Let's embark on a transformative
-                journey together!!"
+                I design and develop modern, high-performance websites and web
+                applications with a strong focus on user experience,
+                responsiveness, and clean code. Passionate about creating
+                visually engaging digital products that deliver real business
+                value.
               </p>
               <Spinner text="Contact" color={"#fff"} />
             </div>
