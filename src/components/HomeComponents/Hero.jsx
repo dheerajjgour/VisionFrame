@@ -84,7 +84,7 @@ const Hero = () => {
               <div className="text">
                 <h2>Ashvin Sharma</h2>
                 <h2 className="fill">Ashvin Sharma</h2>
-                <h2>Ashwin Sharma</h2>
+                <h2>Ashvin Sharma</h2>
                 <h2 className="fill">Ashvin Sharma</h2>
               </div>
             </div>
