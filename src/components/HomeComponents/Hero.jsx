@@ -24,8 +24,8 @@ const Hero = () => {
             imgRef.current,
             { scale: isDesktop ? 2.6 : 1.2 },
             {
-              scale: isDesktop ? 0.7 : 0.5,
-              y: isDesktop ? 50 : 90,
+              scale: isDesktop ? 0.7 : 0.4,
+              y: isDesktop ? 50 : 120,
               scrollTrigger: {
                 trigger: heroRef.current,
                 start: "top top",
@@ -60,7 +60,7 @@ const Hero = () => {
             ref={imgRef}
             src="/banner2.jpg"
             style={{ transformOrigin: "center center", borderRadius:"10px" }}
-          ></img>
+          ></img> 
         </div>
         <div className="container row-1">
           <div className="wrapper">
