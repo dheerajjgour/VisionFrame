@@ -59,7 +59,7 @@ const Hero = () => {
           <img
             ref={imgRef}
             src="/banner2.jpg"
-            style={{ transformOrigin: "center center" }}
+            style={{ transformOrigin: "center center", borderRadius:"10px" }}
           ></img>
         </div>
         <div className="container row-1">

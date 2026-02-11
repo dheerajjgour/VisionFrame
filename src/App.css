@@ -1141,9 +1141,12 @@ footer .row-3 {
   .contact .row-1{
   grid-template-columns:1fr;
 }
-
+footer .row-1, footer .row-2, footer .row-3 {
+    gap: 10px;
+}
   footer .row-1 {
     flex-direction: column;
+    margin-bottom: 25px;
 }
 footer .row-2 {
     flex-direction: column;
