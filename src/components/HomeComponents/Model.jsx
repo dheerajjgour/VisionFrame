@@ -14,7 +14,6 @@ function Model() {
             <div className="col-1">
               <h3>Content management System</h3>
               <p>
-               
                 The right CMS will make your website easy to manage and update.
               </p>
             </div>

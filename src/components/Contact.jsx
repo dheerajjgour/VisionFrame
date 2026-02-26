@@ -170,7 +170,7 @@ Feel free to reach out. I’d love to discuss how we can work together.</p>
                 padding: '0.75rem 1.5rem',
                 fontSize: '1rem',
                 marginTop: '30px',
-                backgroundColor: status === 'Sending...' ? '#888' : '#333',
+                backgroundColor: status === 'Sending...' ? '#888' : '#161515',
                 color: '#fff',
                 border: 'none',
                 borderRadius: '4px',

@@ -12,6 +12,7 @@ import SmoothScroll from '../components/SmoothScroll';
 import RecentWork from '../components/RecentWork';
 import Contact from '../components/Contact';
 import Api from '../components/Api';
+import RecentWorkStack from '../components/HomeComponents/RecentWorkStack';
 const Home = () => {
   return (
     <>
@@ -20,7 +21,8 @@ const Home = () => {
         <Hero />
         <Features />
         <Partnership />
-        <RecentWork/>
+        {/* <RecentWork/> */}
+        <RecentWorkStack/>
         <Testimonial />
         <Skills />
         <Model />
